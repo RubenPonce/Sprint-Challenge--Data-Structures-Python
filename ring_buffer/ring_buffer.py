@@ -8,6 +8,7 @@ class RingBuffer:
     #bottom of the list is the 0 index for some reason
     #resets the array so next time it is full it saves the 0 index
     if self.current is self.capacity:
+      self.current = 0
   
     self.storage[self.current] = item
     self.current += 1
